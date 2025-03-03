@@ -1,0 +1,44 @@
+.css-j5r0tf {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #7E99AB;
+}
+
+.diagnosis {
+  color: #fff;
+  padding: 0.2em 0.5em;
+  border-radius: 0.5em;
+}
+
+.diagnosis.benign {
+  background-color: #01DB4B;
+}
+
+.css-reset-button {
+  background-color: #007bff; /* Bootstrap primary color */
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.css-reset-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+body {
+  font-family: Arial, sans-serif; /* Improved font */
+  background-color: #f8f9fa; /* Light background for better contrast */
+}
+
+.sidebar {
+  background-color: #ffffff; /* White background for sidebar */
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.diagnosis.malicious {
+  background-color: #ff4b4b
+}

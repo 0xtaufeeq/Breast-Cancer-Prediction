@@ -1,0 +1,60 @@
+import streamlit as st
+import pandas as pd
+
+def load_data():
+    return pd.read_csv("data/data.csv")
+
+def show_data():
+    data = load_data()
+    st.title("Dataset")
+    st.write("### Breast Cancer Wisconsin (Diagnostic) Data Set")
+    st.write("This dataset contains measurements of cell nuclei from breast cancer tumors.")
+    st.write("You can find more details about the dataset [here](https://www.kaggle.com/datasets/uciml/breast-cancer-wisconsin-data).")
+    st.write("#### Complete Dataset:")
+    st.write(data)
+    st.write("#### Columns:")
+    st.write("- `id`: Unique identifier for each sample")
+    st.write("- `diagnosis`: Diagnosis of breast cancer (M = malignant, B = benign)")
+    st.write("- `radius_mean`: Mean radius of the cell nuclei")
+    st.write("- `texture_mean`: Mean texture of the cell nuclei")
+    st.write("- `perimeter_mean`: Mean perimeter of the cell nuclei")
+    st.write("- `area_mean`: Mean area of the cell nuclei")
+    st.write("- `smoothness_mean`: Mean smoothness of the cell nuclei")
+    st.write("- `compactness_mean`: Mean compactness of the cell nuclei")
+    st.write("- `concavity_mean`: Mean concavity of the cell nuclei")
+    st.write("- `concave points_mean`: Mean number of concave portions of the cell nuclei")
+    st.write("- `symmetry_mean`: Mean symmetry of the cell nuclei")
+    st.write("- `fractal_dimension_mean`: Mean fractal dimension of the cell nuclei")
+    st.write("- `radius_se`: Standard error of the radius of the cell nuclei")
+    st.write("- `texture_se`: Standard error of the texture of the cell nuclei")
+    st.write("- `perimeter_se`: Standard error of the perimeter of the cell nuclei")
+    st.write("- `area_se`: Standard error of the area of the cell nuclei")
+    st.write("- `smoothness_se`: Standard error of the smoothness of the cell nuclei")
+    st.write("- `compactness_se`: Standard error of the compactness of the cell nuclei")
+    st.write("- `concavity_se`: Standard error of the concavity of the cell nuclei")
+    st.write("- `concave points_se`: Standard error of the number of concave portions of the cell nuclei")
+    st.write("- `symmetry_se`: Standard error of the symmetry of the cell nuclei")
+    st.write("- `fractal_dimension_se`: Standard error of the fractal dimension of the cell nuclei")
+    st.write("- `radius_worst`: Worst radius of the cell nuclei")
+    st.write("- `texture_worst`: Worst texture of the cell nuclei")
+    st.write("- `perimeter_worst`: Worst perimeter of the cell nuclei")
+    st.write("- `area_worst`: Worst area of the cell nuclei")
+    st.write("- `smoothness_worst`: Worst smoothness of the cell nuclei")
+    st.write("- `compactness_worst`: Worst compactness of the cell nuclei")
+    st.write("- `concavity_worst`: Worst concavity of the cell nuclei")
+    st.write("- `concave points_worst`: Worst number of concave portions of the cell nuclei")
+    st.write("- `symmetry_worst`: Worst symmetry of the cell nuclei")
+    st.write("- `fractal_dimension_worst`: Worst fractal dimension of the cell nuclei")
+    st.write("#### Sample:")
+    st.write(data.head())
+    st.write("#### Shape:")
+    st.write(data.shape)
+    st.write("#### Summary:")
+    st.write(data.describe())
+
+
+def main():
+    show_data()
+
+if __name__ == '__main__':
+    main()
